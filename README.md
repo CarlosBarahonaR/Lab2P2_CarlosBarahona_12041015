@@ -1,1 +1,2 @@
-# Lab2P2_CarlosBarahona_12041015
+Carlos José Barahona Rivera
+12041015
