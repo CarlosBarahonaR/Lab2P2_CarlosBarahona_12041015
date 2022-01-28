@@ -335,7 +335,22 @@ public class Lab2P2_CarlosBarahona_12041015 {
                 }
 
                 case 4: {
-           
+                    System.out.println("Ingrese la posicon del animal que se alimentara");
+                    int posicion = r.nextInt();
+                    System.out.println("Ingrese la posicon del animal que sera devorado");
+                    int posicion2 = r.nextInt();
+
+                    try {
+
+                        int vida = animales.get(posicion).getVida();
+                        int vida2 = animales.get(posicion2).getVida();
+                        animales.get(posicion).setVida(vida + vida2);
+                        animales.remove(posicion2);
+                    } catch (Exception e) {
+                        System.out.println("Una de las posiciones establecidas no existe.");
+                    }
+
+                    break;
                 }
 
             }
