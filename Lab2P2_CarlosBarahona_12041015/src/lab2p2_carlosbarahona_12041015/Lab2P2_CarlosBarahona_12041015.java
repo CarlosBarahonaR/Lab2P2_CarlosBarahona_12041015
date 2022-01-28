@@ -293,6 +293,15 @@ public class Lab2P2_CarlosBarahona_12041015 {
                                 }
                                 break;
                             }
+                            case 2: {
+                                for (int u = 0; u < animales.size(); u++) {
+                                    if (animales.get(u) instanceof Animales) {
+                                        System.out.println(animales.get(u));
+
+                                    }
+                                }
+                                break;
+                            }
                             
                         }
 
