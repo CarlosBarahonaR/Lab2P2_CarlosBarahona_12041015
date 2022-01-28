@@ -88,7 +88,78 @@ public class Lab2P2_CarlosBarahona_12041015 {
                 }
 
                 case 2: {
-         
+                    int opcion2 = 0;
+                    while (opcion2 != 3) {
+                        System.out.println("¿Qué desea hacer?\n"
+                                + "1) Modificar atributo en especifico de animal\n"
+                                + "2) Modificar animal entero\n"
+                                + "3) Salir");
+                        opcion2 = r.nextInt();
+                        switch (opcion2) {
+                
+
+                            case 2: {
+
+                                System.out.println("Ingrese la posicon de la lista del animal que desea modificar");
+                                int posicion = r.nextInt();
+                                r.nextLine();
+
+                                System.out.println("Ingrese el nombre cientifico del animal");
+                                String nombreCientifico3 = r.nextLine();
+
+                                for (int f = 0; f < animales.size(); f++) {
+                                    String nombre = "";
+                                    if (animales.get(f) instanceof Animales) {
+                                        nombre = ((Animales) animales.get(f)).getNombreCientifico();
+                                    }
+                                    while (nombreCientifico3.equals(nombre)) {
+                                        System.out.println("Ingrese el nombre cientifico del animal");
+                                        nombreCientifico3 = r.nextLine();
+                                    }
+                                }
+                                r.nextLine();
+                                System.out.println("Ingrese el nombre comun del animal");
+                                String nombreComun3 = r.nextLine();
+                                r.nextLine();
+                                System.out.println("Ingrese el habitat del animal");
+                                String habitat3 = r.nextLine();
+                                r.nextLine();
+                                System.out.println("Ingrese la alimentación del animal");
+                                String alimentacion3 = r.nextLine();
+                                r.nextLine();
+                                System.out.println("Ingrese la descripcion del animal");
+                                r.nextLine();
+                                String descripcion3 = r.nextLine();
+                                System.out.println("Ingrese distribucion geografica del animal");
+                                String puesto3 = r.nextLine();
+                                r.nextLine();
+                                System.out.println("Ingrese la vida del animal");
+                                int vida = r.nextInt();
+
+                                for (int j = 0; j < animales.size(); j++) {
+                                    int vida2 = 0;
+                                    if (animales.get(j) instanceof Animales) {
+                                        vida2 = ((Animales) animales.get(j)).getVida();
+                                    }
+                                    while (vida2 == vida) {
+                                        System.out.println("Ingrese la vida del animal");
+                                        vida = r.nextInt();
+                                    }
+                                }
+
+                                Animales animal = new Animales(nombreCientifico3, nombreComun3, habitat3, alimentacion3, descripcion3, puesto3, vida);
+
+                                try {
+
+                                    animales.set(posicion, animal);
+                                } catch (Exception e) {
+                                    System.out.println("La posición establecida para modificar no existe.");
+                                }
+
+                            }
+                        }
+                    }
+                    break;
                 }
                 case 3: {
                     System.out.println("¿Como desea imprimir?\n"
