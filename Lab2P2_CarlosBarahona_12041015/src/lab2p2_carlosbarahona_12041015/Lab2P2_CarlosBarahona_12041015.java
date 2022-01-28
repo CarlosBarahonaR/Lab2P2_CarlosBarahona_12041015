@@ -302,7 +302,32 @@ public class Lab2P2_CarlosBarahona_12041015 {
                                 }
                                 break;
                             }
-                            
+                            case 3: {
+                                System.out.println("Ingrese el nombre cientifico del animal para buscarlo");
+                                String nombreCientifico = r.nextLine();
+                                r.nextLine();
+
+                                int item2 = 0;
+
+                                for (int z = 0; z < animales.size(); z++) {
+                                    String nc = "";
+                                    if (animales.get(z) instanceof Animales) {
+                                        nc = ((Animales) animales.get(z)).getNombreCientifico();
+                                    }
+                                    if (nombreCientifico.equals(nc)) {
+                                        item2 = z;
+                                        z = animales.size();
+                                    } else {
+                                        item2 = 100000;
+                                    }
+                                }
+                                if (item2 <= animales.size()) {
+                                    if (animales.get(item2) instanceof Animales) {
+                                        System.out.println(animales.get(item2));
+                                    }
+                                }
+                                break;
+                            }
                         }
 
                         break;
